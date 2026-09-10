@@ -39,6 +39,7 @@ const structuredData = {
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/hero-video.css" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.name} />
     <meta property="og:title" content={title} />
@@ -51,6 +52,7 @@ const structuredData = {
     <meta name="twitter:image" content={socialImage} />
     <title>{title}</title>
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    <script src="/hero-video.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
