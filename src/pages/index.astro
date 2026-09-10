@@ -1,6 +1,14 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { dispositions, loop, media, site } from '../data/site';
+import { dispositions, loop, site } from '../data/site';
+import heroSource from '../assets/hero-station.png';
+import objectCupSource from '../assets/object-last-cup.png';
+import caseSeedSource from '../assets/case-seed-jar.png';
+import fieldStationSource from '../assets/field-station.png';
+import fieldDeskSource from '../assets/field-desk.png';
+import fieldShiftSource from '../assets/field-shift.png';
+import fieldClaimsSource from '../assets/field-claims.png';
 
 const dispositionNotes = [
   'Return to a verified claimant',
@@ -9,6 +17,13 @@ const dispositionNotes = [
   'Release through public disposition',
   'Remove from circulation',
   'Send beyond your authority',
+];
+
+const gallery = [
+  { src: fieldStationSource, alt: 'DECK 97 visual development view across the Lost Property Division workstation.' },
+  { src: fieldDeskSource, alt: 'DECK 97 visual development view of the inspection desk and station interior.' },
+  { src: fieldClaimsSource, alt: 'DECK 97 visual development showing a claimant message and evidence interface around an object.' },
+  { src: fieldShiftSource, alt: 'DECK 97 visual development view of the night-shift workstation.' },
 ];
 ---
 <BaseLayout>
@@ -29,14 +44,7 @@ const dispositionNotes = [
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero-media" aria-hidden="true">
-        <img
-          src={media.hero.src}
-          width={media.hero.width}
-          height={media.hero.height}
-          alt=""
-          fetchpriority="high"
-          decoding="async"
-        />
+        <Image src={heroSource} width={1279} alt="" format="webp" quality={78} loading="eager" fetchpriority="high" decoding="async" />
       </div>
       <div class="shell hero-inner">
         <p class="micro hero-kicker">Station A / Deck 97 / Night Intake</p>
@@ -60,7 +68,7 @@ const dispositionNotes = [
       <p class="hero-caption">DECK 97 visual development / imagery subject to change</p>
     </section>
 
-    <section class="section" id="object" aria-labelledby="object-title">
+    <section class="section section--object" id="object" aria-labelledby="object-title">
       <div class="shell">
         <div class="section-head">
           <p class="micro section-number">01 / THE OBJECT</p>
@@ -70,14 +78,14 @@ const dispositionNotes = [
           </div>
         </div>
         <div class="object-grid">
-          <figure class="media-frame">
-            <img src={media.object.src} width={media.object.width} height={media.object.height} alt={media.object.alt} loading="lazy" decoding="async" />
-            <figcaption class="media-label">Visual development / inspection record</figcaption>
+          <figure class="media-frame media-frame--reference">
+            <Image src={objectCupSource} width={1100} alt="Authored DECK 97 reference for The Last Cup, a worn transit cup with repair and ownership evidence." format="webp" quality={80} loading="lazy" decoding="async" />
+            <figcaption class="media-label">AUTH-002 / THE LAST CUP / authored object development</figcaption>
           </figure>
           <aside class="object-card" aria-label="Example intake record">
             <div>
               <p class="micro">Lost Property Division / Intake</p>
-              <p class="object-id">D97—?</p>
+              <p class="object-id">AUTH—002</p>
               <p>No answer arrives with the object. Only evidence does. Wear, repair, material, route records and competing claims can agree — or fail to.</p>
             </div>
             <dl class="measurements">
@@ -91,7 +99,7 @@ const dispositionNotes = [
       </div>
     </section>
 
-    <section class="section" id="process" aria-labelledby="process-title">
+    <section class="section section--process" id="process" aria-labelledby="process-title">
       <div class="shell">
         <div class="section-head">
           <p class="micro section-number">02 / PROCEDURE</p>
@@ -112,13 +120,11 @@ const dispositionNotes = [
       </div>
     </section>
 
-    <section class="section" aria-labelledby="decision-title">
+    <section class="section section--decision" aria-labelledby="decision-title">
       <div class="shell">
         <div class="section-head">
           <p class="micro section-number">03 / DISPOSITION</p>
-          <div>
-            <h2 class="section-title" id="decision-title">Evidence can be factual. A decision can still be difficult.</h2>
-          </div>
+          <div><h2 class="section-title" id="decision-title">Evidence can be factual. A decision can still be difficult.</h2></div>
         </div>
         <div class="decision-panel">
           <div class="decision-copy">
@@ -128,17 +134,14 @@ const dispositionNotes = [
           </div>
           <div class="decision-grid">
             {dispositions.map((item, index) => (
-              <div class="disposition">
-                <strong>{item}</strong>
-                <span>{dispositionNotes[index]}</span>
-              </div>
+              <div class="disposition"><strong>{item}</strong><span>{dispositionNotes[index]}</span></div>
             ))}
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="station" aria-labelledby="world-title">
+    <section class="section section--world" id="station" aria-labelledby="world-title">
       <div class="shell world-grid">
         <div>
           <p class="micro section-number">04 / STATION A</p>
@@ -154,23 +157,55 @@ const dispositionNotes = [
       </div>
     </section>
 
-    <section class="section" aria-labelledby="gallery-title">
+    <section class="section section--gallery" aria-labelledby="gallery-title">
       <div class="shell">
         <div class="section-head">
           <p class="micro section-number">05 / FIELD RECORDS</p>
-          <div>
-            <h2 class="section-title" id="gallery-title">One room. One desk. A civilization passing through it.</h2>
-          </div>
+          <div><h2 class="section-title" id="gallery-title">One room. One desk. A civilization passing through it.</h2></div>
         </div>
         <div class="gallery-grid">
-          {media.gallery.map((item, index) => (
-            <button class="gallery-item" type="button" data-gallery-src={item.src} data-gallery-alt={item.alt} aria-label={`Open DECK 97 visual ${index + 1}`}>
-              <img src={item.src} width={item.width} height={item.height} alt={item.alt} loading="lazy" decoding="async" />
+          {gallery.map((item, index) => (
+            <button class={`gallery-item gallery-item--${index + 1}`} type="button" data-gallery-alt={item.alt} aria-label={`Open DECK 97 visual ${index + 1}`}>
+              <Image src={item.src} width={1080} alt={item.alt} format="webp" quality={72} loading="lazy" decoding="async" />
               <span class="gallery-mark">D97 / {String(index + 1).padStart(2, '0')}</span>
             </button>
           ))}
         </div>
         <p class="gallery-note">Current DECK 97 visual development material. Presentation and assets may evolve during production.</p>
+      </div>
+    </section>
+
+    <section class="section section--case" aria-labelledby="case-title">
+      <div class="shell">
+        <div class="section-head case-head">
+          <p class="micro section-number">06 / CASE FILE</p>
+          <div>
+            <p class="micro case-id">AUTH-011 / THE SEED JAR</p>
+            <h2 class="section-title" id="case-title">Three claims. One object. No uncontested history.</h2>
+          </div>
+        </div>
+        <div class="case-grid">
+          <figure class="case-visual">
+            <Image src={caseSeedSource} width={760} alt="Authored DECK 97 reference board for The Seed Jar, a sealed specimen jar containing the Sable-19 cultivar." format="webp" quality={80} loading="lazy" decoding="async" />
+            <figcaption class="media-label">AUTH-011 / authored case material</figcaption>
+          </figure>
+          <div class="case-record">
+            <dl class="case-facts">
+              <div><dt>CULTIVAR</dt><dd>SABLE-19</dd></div>
+              <div><dt>EST. SEEDS</dt><dd>214</dd></div>
+              <div><dt>EST. VIABILITY</dt><dd>63%</dd></div>
+            </dl>
+            <div class="claim-list" aria-label="Competing claims">
+              <div><span>RUUN VALE</span><strong>Private restitution</strong></div>
+              <div><span>COMMON SEED TRUST</span><strong>Mandatory duplication</strong></div>
+              <div><span>PALISADE</span><strong>Biosecurity restriction</strong></div>
+            </div>
+            <p class="case-question">Which claim survives disposition?</p>
+            <div class="case-actions" aria-label="Possible dispositions">
+              <span>RETURN</span><span>HOLD</span><span>ARCHIVE</span><span>ESCALATE</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -214,10 +249,11 @@ const dispositionNotes = [
     const dialogImage = document.querySelector<HTMLImageElement>('#dialog-image');
     const closeButton = document.querySelector<HTMLButtonElement>('.dialog-close');
 
-    document.querySelectorAll<HTMLButtonElement>('[data-gallery-src]').forEach((button) => {
+    document.querySelectorAll<HTMLButtonElement>('.gallery-item').forEach((button) => {
       button.addEventListener('click', () => {
         if (!dialog || !dialogImage) return;
-        dialogImage.src = button.dataset.gallerySrc ?? '';
+        const image = button.querySelector<HTMLImageElement>('img');
+        dialogImage.src = image?.currentSrc || image?.src || '';
         dialogImage.alt = button.dataset.galleryAlt ?? 'DECK 97 visual development image.';
         dialog.showModal();
       });

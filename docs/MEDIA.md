@@ -1,17 +1,17 @@
 # DECK 97 website media map
 
-`raw/` is immutable source material for the website workflow. Public-facing files are aliases/copies selected for web delivery; originals remain untouched.
+`raw/` remains immutable source material. The public page no longer serves the selected source PNGs directly: production images are imported from `src/assets/` and transformed by `astro:assets` into optimized WebP output at build time.
 
-| Public asset | Source asset | Purpose |
+| Site role | Source asset | Presentation |
 | --- | --- | --- |
-| `public/media/deck97-hero.png` | `raw/1a7b7d78-d9b9-4077-a5b2-e34e75a4c428.png` | Hero and social card |
-| `public/media/deck97-object.png` | `raw/78d62baa-cd31-4a31-b77b-8b92ca265d8d (1).png` | Object / inspection section |
-| `public/media/deck97-field-01.png` | `raw/1bde90f7-984a-4484-ac59-1c6d85a4f3ab.png` | Gallery |
-| `public/media/deck97-field-02.png` | `raw/20f7f540-d276-44a2-8306-45aceb494064.png` | Gallery |
-| `public/media/deck97-field-03.png` | `raw/365e18d5-a2ce-4ffe-afdc-fb54a6344980.png` | Gallery |
-| `public/media/deck97-field-04.png` | `raw/48903de9-eb6d-4875-bec1-96049dc74eeb (1).png` | Gallery |
-| `public/media/deck97-field-05.png` | `raw/f07d4a70-0ebc-43e9-8507-9a0e7be81c1d.png` | Gallery |
+| Hero | `raw/f07d4a70-0ebc-43e9-8507-9a0e7be81c1d.png` | Station A / planet view; cropped in CSS to remove window chrome and development header material |
+| Object | `raw/The Last Cup_ Futuristic Transit Cup Blueprint.png` | AUTH-002 authored object development; optimized and framed as reference material |
+| Gallery 01 | `raw/1bde90f7-984a-4484-ac59-1c6d85a4f3ab.png` | Workstation view; deliberate crop removes desktop title bar |
+| Gallery 02 | `raw/20f7f540-d276-44a2-8306-45aceb494064.png` | Inspection desk view; deliberate crop removes desktop title bar |
+| Gallery 03 | `raw/48903de9-eb6d-4875-bec1-96049dc74eeb (1).png` | Claimant/evidence state; deliberate crop removes desktop title bar |
+| Gallery 04 | `raw/365e18d5-a2ce-4ffe-afdc-fb54a6344980.png` | Night-shift workstation; deliberate crop removes desktop title bar |
+| Case teaser | `raw/The Seed Jar_ Futuristic Specimen Catalog.png` | AUTH-011 authored case material, paired with canonical claim/evidence facts |
 
-The selected source files are all below ~220 KB and around 1280×750, so they are already suitable for a fast first production pass without serving the multi-megabyte reference boards directly. Reference boards remain in `raw/` for future art-direction work.
+The original files are never renamed or deleted. Temporary review aliases used during the polish pass are removed from `public/` before finalization.
 
-Public presentation labels these images as **visual development** rather than claiming they are final gameplay screenshots.
+All gameplay/prototype imagery remains explicitly described as visual development and subject to change. Authored object boards are described as authored object/case development rather than final gameplay.

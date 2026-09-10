@@ -11,30 +11,7 @@ export const site = {
   kickstarterUrl: null as string | null,
   contactUrl: null as string | null,
   socialUrls: [] as Array<{ label: string; url: string }>,
-  heroImage: '/media/deck97-hero.png',
-  ogImage: '/media/deck97-hero.png',
-};
-
-export const media = {
-  hero: {
-    src: '/media/deck97-hero.png',
-    width: 1286,
-    height: 752,
-    alt: 'DECK 97 visual development image of the lost-property inspection setting.',
-  },
-  object: {
-    src: '/media/deck97-object.png',
-    width: 1277,
-    height: 745,
-    alt: 'DECK 97 visual development image centered on an object under inspection.',
-  },
-  gallery: [
-    { src: '/media/deck97-field-01.png', width: 1282, height: 751, alt: 'DECK 97 visual development image.' },
-    { src: '/media/deck97-field-02.png', width: 1282, height: 752, alt: 'DECK 97 visual development image.' },
-    { src: '/media/deck97-field-03.png', width: 1283, height: 733, alt: 'DECK 97 visual development image.' },
-    { src: '/media/deck97-field-04.png', width: 1280, height: 753, alt: 'DECK 97 visual development image.' },
-    { src: '/media/deck97-field-05.png', width: 1279, height: 748, alt: 'DECK 97 visual development image.' },
-  ],
+  ogImage: '/media/deck97-og.png',
 };
 
 export const dispositions = ['RETURN', 'HOLD', 'ARCHIVE', 'AUCTION', 'DISPOSE', 'ESCALATE'] as const;
