@@ -2,7 +2,7 @@
 .hero-media img {
   object-position: center 62%;
   transform: scale(1.12);
-  filter: saturate(.76) contrast(1.04) brightness(.84);
+  filter: saturate(.76) contrast(1.04) brightness(.91);
   animation: archive-wake 1.1s cubic-bezier(.2,.8,.2,1) both;
 }
 .hero::before {
@@ -18,6 +18,8 @@
 .hero-tagline, .section-title, .world-quote, .final-cta h2 { text-wrap: balance; }
 .hero-pitch, .section-intro, .world-copy p { text-wrap: pretty; }
 .hero-pitch { color: rgba(231,224,209,.86); }
+.hero-register strong { color: rgba(231,224,209,.94); }
+.hero-register span { color: rgba(231,224,209,.69); }
 .hero-caption { color: rgba(231,224,209,.58); line-height: 1.35; }
 .cta { transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .2s ease; }
 .cta:hover { transform: translateY(-1px); }
