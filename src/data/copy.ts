@@ -39,7 +39,7 @@ export const copy = {
       statusLabel: 'STATUS',
       status: 'In development',
       origin: 'Independent game made in Quebec, Canada',
-      caption: 'DECK 97 development material / imagery and presentation subject to change',
+      caption: 'Current in-engine development capture / imagery and presentation subject to change',
     },
     object: {
       number: '01 / THE OBJECT',
@@ -90,7 +90,7 @@ export const copy = {
       number: '05 / THE PROJECT',
       title: 'Built in Quebec. Meant to remain human.',
       intro: 'DECK 97 is an independent game in active development at Solcogito in Quebec, Canada. The project is currently self-funded and being built from the ground up.',
-      ai: 'Some early visual-development imagery on this site uses generative AI as temporary pre-production material. It lets us explore composition, mood and direction while the project does not yet have the budget to commission all of the art it needs.',
+      ai: 'The current workstation and station images on this page are in-engine development captures. Some authored reference and concept material elsewhere on the site uses generative AI as temporary pre-production material, helping explore composition, mood and direction while the project does not yet have the budget to commission all of the art it needs.',
       intent: 'The production goal is not to replace artists. A future crowdfunding campaign is intended in part to fund human illustration, visual development and other specialist creative work. AI may remain in the toolchain where it is useful, but as a multiplier of human talent — not a substitute for it. The finished game should feel made by people.',
       principles: [
         ['HUMAN AUTHORSHIP', 'Final creative identity is led by people, their judgment and their individual styles.'],
@@ -101,12 +101,12 @@ export const copy = {
     gallery: {
       number: '06 / FIELD RECORDS',
       title: 'One room. One desk. A civilization passing through it.',
-      note: 'Current game captures and visual-development material. Art, interface and presentation may evolve during production.',
+      note: 'Current in-engine captures and station visual-development material. Art, interface and presentation may evolve during production.',
       alts: [
-        'DECK 97 development view across the Lost Property Division workstation.',
-        'DECK 97 development view of the inspection desk and station interior.',
-        'DECK 97 development view showing a claimant message and evidence interface around an object.',
-        'DECK 97 development view of the night-shift workstation.',
+        'Current in-engine DECK 97 wide view of the Lost Property Division workstation.',
+        'Current in-engine DECK 97 view of the station interior and inspection workspace.',
+        'Current in-engine DECK 97 night-shift view across the inspection desk.',
+        'DECK 97 station-module visual-development cutaway showing the office inside the orbital structure.',
       ],
     },
     caseFile: {
@@ -177,7 +177,7 @@ export const copy = {
       statusLabel: 'STATUT',
       status: 'En développement',
       origin: 'Jeu indépendant créé au Québec, Canada',
-      caption: 'Matériel de développement DECK 97 / visuels et présentation sujets à changement',
+      caption: 'Capture de développement actuelle en moteur / visuels et présentation sujets à changement',
     },
     object: {
       number: '01 / L’OBJET',
@@ -228,7 +228,7 @@ export const copy = {
       number: '05 / LE PROJET',
       title: 'Créé au Québec. Pensé pour rester humain.',
       intro: 'DECK 97 est un jeu indépendant en développement actif chez Solcogito, au Québec. Le projet est actuellement autofinancé et construit à partir de zéro.',
-      ai: 'Certains visuels de développement présentés sur ce site utilisent l’IA générative comme matériel temporaire de préproduction. Elle nous sert à explorer la composition, l’ambiance et une direction pendant que le projet n’a pas encore les moyens de commander tout le travail artistique dont il aura besoin.',
+      ai: 'Les images actuelles du bureau et de la station sur cette page sont des captures du jeu en moteur. Certains visuels de référence et de concept ailleurs sur le site utilisent l’IA générative comme matériel temporaire de préproduction, afin d’explorer la composition, l’ambiance et une direction pendant que le projet n’a pas encore les moyens de commander tout le travail artistique dont il aura besoin.',
       intent: 'L’objectif de production n’est pas de remplacer les artistes. Une future campagne de financement participatif servirait notamment à financer de l’illustration humaine, du développement visuel et d’autres spécialités créatives. L’IA pourra rester dans certains outils lorsqu’elle est utile, mais comme multiplicateur du talent humain — jamais comme substitut. Le jeu final doit avoir été façonné par des personnes.',
       principles: [
         ['CRÉATION HUMAINE', 'L’identité créative finale est portée par des personnes, leur jugement et leurs styles propres.'],
@@ -239,12 +239,12 @@ export const copy = {
     gallery: {
       number: '06 / REGISTRES VISUELS',
       title: 'Une pièce. Un bureau. Une civilisation qui passe devant vous.',
-      note: 'Captures du jeu et matériel de développement visuel actuels. L’art, l’interface et la présentation peuvent évoluer pendant la production.',
+      note: 'Captures actuelles du jeu en moteur et matériel de développement visuel de la station. L’art, l’interface et la présentation peuvent évoluer pendant la production.',
       alts: [
-        'Vue de développement de DECK 97 sur le poste de travail de la Division des objets perdus.',
-        'Vue de développement de DECK 97 montrant le bureau d’inspection et l’intérieur de la station.',
-        'Vue de développement de DECK 97 montrant un message de requérant et l’interface de preuve autour d’un objet.',
-        'Vue de développement de DECK 97 montrant le poste de travail pendant le quart de nuit.',
+        'Vue large actuelle en moteur du poste de travail de la Division des objets perdus dans DECK 97.',
+        'Vue actuelle en moteur de l’intérieur de la station et de l’espace d’inspection dans DECK 97.',
+        'Vue actuelle en moteur du bureau d’inspection pendant le quart de nuit dans DECK 97.',
+        'Vue en coupe de développement du module de station de DECK 97 montrant le bureau dans la structure orbitale.',
       ],
     },
     caseFile: {
