@@ -38,7 +38,7 @@ export const copy = {
       platform: 'PC / Windows',
       statusLabel: 'STATUS',
       status: 'In development',
-      origin: 'Independent game made in Quebec, Canada',
+      origin: 'Independent solo game made in Quebec, Canada',
       caption: 'Current in-engine development capture / imagery and presentation subject to change',
     },
     object: {
@@ -89,7 +89,7 @@ export const copy = {
     project: {
       number: '05 / THE PROJECT',
       title: 'Built in Quebec. Meant to remain human.',
-      intro: 'DECK 97 is an independent game in active development at Solcogito in Quebec, Canada. The project is currently self-funded and being built from the ground up.',
+      intro: 'DECK 97 is an independent game in active development in Quebec, Canada. The project is currently self-funded and built from the ground up by a solo developer.',
       ai: 'The current workstation and station images on this page are in-engine development captures. Some authored reference and concept material elsewhere on the site uses generative AI as temporary pre-production material, helping explore composition, mood and direction while the project does not yet have the budget to commission all of the art it needs.',
       intent: 'The production goal is not to replace artists. A future crowdfunding campaign is intended in part to fund human illustration, visual development and other specialist creative work. AI may remain in the toolchain where it is useful, but as a multiplier of human talent — not a substitute for it. The finished game should feel made by people.',
       principles: [
@@ -134,7 +134,7 @@ export const copy = {
       kickstarter: 'Follow the Kickstarter',
     },
     footer: {
-      studio: 'A Solcogito game',
+      studio: 'Independent solo project',
       contact: 'Contact',
       rights: 'All rights reserved.',
     },
@@ -176,7 +176,7 @@ export const copy = {
       platform: 'PC / Windows',
       statusLabel: 'STATUT',
       status: 'En développement',
-      origin: 'Jeu indépendant créé au Québec, Canada',
+      origin: 'Jeu indépendant solo créé au Québec, Canada',
       caption: 'Capture de développement actuelle en moteur / visuels et présentation sujets à changement',
     },
     object: {
@@ -227,7 +227,7 @@ export const copy = {
     project: {
       number: '05 / LE PROJET',
       title: 'Créé au Québec. Pensé pour rester humain.',
-      intro: 'DECK 97 est un jeu indépendant en développement actif chez Solcogito, au Québec. Le projet est actuellement autofinancé et construit à partir de zéro.',
+      intro: 'DECK 97 est un jeu indépendant en développement actif au Québec. Le projet est actuellement autofinancé et construit à partir de zéro par un développeur solo.',
       ai: 'Les images actuelles du bureau et de la station sur cette page sont des captures du jeu en moteur. Certains visuels de référence et de concept ailleurs sur le site utilisent l’IA générative comme matériel temporaire de préproduction, afin d’explorer la composition, l’ambiance et une direction pendant que le projet n’a pas encore les moyens de commander tout le travail artistique dont il aura besoin.',
       intent: 'L’objectif de production n’est pas de remplacer les artistes. Une future campagne de financement participatif servirait notamment à financer de l’illustration humaine, du développement visuel et d’autres spécialités créatives. L’IA pourra rester dans certains outils lorsqu’elle est utile, mais comme multiplicateur du talent humain — jamais comme substitut. Le jeu final doit avoir été façonné par des personnes.',
       principles: [
@@ -272,7 +272,7 @@ export const copy = {
       kickstarter: 'Suivre le Kickstarter',
     },
     footer: {
-      studio: 'Un jeu de Solcogito',
+      studio: 'Projet indépendant solo',
       contact: 'Contact',
       rights: 'Tous droits réservés.',
     },
