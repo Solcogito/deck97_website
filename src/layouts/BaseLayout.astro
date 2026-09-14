@@ -50,7 +50,6 @@ const structuredData = {
     <link rel="alternate" hreflang="x-default" href={new URL('/', site.url).toString()} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="/hero-video.css" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.name} />
     <meta property="og:locale" content={lang === 'fr' ? 'fr_CA' : 'en_CA'} />
@@ -64,7 +63,6 @@ const structuredData = {
     <meta name="twitter:image" content={socialImage} />
     <title>{title}</title>
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
-    <script src="/hero-video.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main"><slot name="skip">Skip to content</slot></a>
