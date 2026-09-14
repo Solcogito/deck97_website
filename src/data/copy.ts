@@ -38,7 +38,7 @@ export const copy = {
       platform: 'PC / Windows',
       statusLabel: 'STATUS',
       status: 'In development',
-      origin: 'Independent solo game made in Quebec, Canada',
+      origin: 'Independent solo game made in Quebec',
       caption: 'Current in-engine development capture / imagery and presentation subject to change',
     },
     object: {
@@ -89,7 +89,7 @@ export const copy = {
     project: {
       number: '05 / THE PROJECT',
       title: 'Built in Quebec. Meant to remain human.',
-      intro: 'DECK 97 is an independent game in active development in Quebec, Canada. The project is currently self-funded and built from the ground up by a solo developer.',
+      intro: 'DECK 97 is an independent game in active development in Quebec. The project is currently self-funded and built from the ground up by a solo developer.',
       ai: 'The current workstation and station images on this page are in-engine development captures. Some authored reference and concept material elsewhere on the site uses generative AI as temporary pre-production material, helping explore composition, mood and direction while the project does not yet have the budget to commission all of the art it needs.',
       intent: 'The production goal is not to replace artists. A future crowdfunding campaign is intended in part to fund human illustration, visual development and other specialist creative work. AI may remain in the toolchain where it is useful, but as a multiplier of human talent — not a substitute for it. The finished game should feel made by people.',
       principles: [
@@ -176,7 +176,7 @@ export const copy = {
       platform: 'PC / Windows',
       statusLabel: 'STATUT',
       status: 'En développement',
-      origin: 'Jeu indépendant solo créé au Québec, Canada',
+      origin: 'Jeu indépendant solo créé au Québec',
       caption: 'Capture de développement actuelle en moteur / visuels et présentation sujets à changement',
     },
     object: {
