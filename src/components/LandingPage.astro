@@ -117,7 +117,7 @@ const gallerySources = [galleryDeskWide, galleryStationView, galleryDeskNight, v
     <section class="final-cta" aria-labelledby="final-title"><div class="shell"><p class="micro">{t.final.micro}</p><h2 id="final-title">{t.final.title}</h2><p>{t.final.body}</p><div class="hero-actions">{site.steamUrl ? <a class="cta" href={site.steamUrl} rel="noreferrer">{t.hero.steam}</a> : <span class="cta cta--disabled">{t.hero.steamPending}</span>}{site.kickstarterUrl && <a class="cta cta--ghost" href={site.kickstarterUrl} rel="noreferrer">{t.final.kickstarter}</a>}</div></div></section>
   </main>
 
-  <footer class="site-footer"><div class="shell footer-row"><div class="footer-brand"><strong>DECK 97</strong><span>{t.footer.studio}</span></div><div class="footer-links">{site.contactUrl && <a href={site.contactUrl}>{t.footer.contact}</a>}{site.socialUrls.map((social) => <a href={social.url} rel="noreferrer">{social.label}</a>)}</div><p class="footer-copy">© 2026 Solcogito. {t.footer.rights}</p></div></footer>
+  <footer class="site-footer"><div class="shell footer-row"><div class="footer-brand"><strong>DECK 97</strong><span>{t.footer.studio}</span></div><div class="footer-links">{site.contactUrl && <a href={site.contactUrl}>{t.footer.contact}</a>}{site.socialUrls.map((social) => <a href={social.url} rel="noreferrer">{social.label}</a>)}</div><p class="footer-copy">© 2026 DECK 97. {t.footer.rights}</p></div></footer>
 
   <dialog class="image-dialog" id="image-dialog" aria-label={t.accessibility.dialog}><div class="dialog-inner"><img id="dialog-image" src="" alt="" /><button class="dialog-close" type="button" aria-label={t.accessibility.close}>{t.accessibility.close}</button></div></dialog>
 
