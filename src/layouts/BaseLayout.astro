@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import '../styles/polish.css';
+import '../styles/bilingual.css';
 import { site } from '../data/site';
 
 interface Props {
@@ -8,6 +9,9 @@ interface Props {
   description?: string;
   image?: string;
   noindex?: boolean;
+  lang?: 'en' | 'fr';
+  alternateHref?: string;
+  alternateLang?: 'en' | 'fr';
 }
 
 const {
@@ -15,6 +19,9 @@ const {
   description = site.description,
   image = site.ogImage,
   noindex = false,
+  lang = 'en',
+  alternateHref,
+  alternateLang,
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, site.url).toString();
 const socialImage = new URL(image, site.url).toString();
@@ -22,14 +29,15 @@ const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'VideoGame',
   name: site.name,
-  url: site.url,
+  url: canonical,
   description,
+  inLanguage: lang,
   gamePlatform: 'PC',
   publisher: { '@type': 'Organization', name: site.studio },
 };
 ---
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -37,11 +45,14 @@ const structuredData = {
     <meta name="theme-color" content="#11110f" />
     {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonical} />
+    {alternateHref && alternateLang && <link rel="alternate" hreflang={alternateLang} href={new URL(alternateHref, site.url).toString()} />}
+    <link rel="alternate" hreflang={lang} href={canonical} />
+    <link rel="alternate" hreflang="x-default" href={new URL('/', site.url).toString()} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="/hero-video.css" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.name} />
+    <meta property="og:locale" content={lang === 'fr' ? 'fr_CA' : 'en_CA'} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
@@ -52,10 +63,9 @@ const structuredData = {
     <meta name="twitter:image" content={socialImage} />
     <title>{title}</title>
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
-    <script src="/hero-video.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main"><slot name="skip">Skip to content</slot></a>
     <slot />
   </body>
 </html>
