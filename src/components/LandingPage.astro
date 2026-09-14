@@ -3,20 +3,20 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { site } from '../data/site';
 import { getCopy, type Locale } from '../data/copy';
-import heroSource from '../assets/hero-station.png';
+import heroSource from '../assets/hero-gameplay.webp';
 import objectCupSource from '../assets/object-last-cup.png';
 import caseSeedSource from '../assets/case-seed-jar.png';
-import fieldStationSource from '../assets/field-station.png';
-import fieldDeskSource from '../assets/field-desk.png';
-import fieldShiftSource from '../assets/field-shift.png';
-import fieldClaimsSource from '../assets/field-claims.png';
+import galleryDeskWide from '../assets/gallery-desk-wide.webp';
+import galleryStationView from '../assets/gallery-station-view.webp';
+import galleryDeskNight from '../assets/gallery-desk-night.webp';
+import visualDevCutaway from '../assets/visual-dev-cutaway.webp';
 
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
 const t = getCopy(locale);
 const isFrench = locale === 'fr';
 const alternateHref = isFrench ? '/' : '/fr/';
-const gallerySources = [fieldStationSource, fieldDeskSource, fieldClaimsSource, fieldShiftSource];
+const gallerySources = [galleryDeskWide, galleryStationView, galleryDeskNight, visualDevCutaway];
 ---
 <BaseLayout lang={locale} title={t.meta.title} description={t.meta.description} alternateHref={alternateHref} alternateLang={isFrench ? 'en' : 'fr'}>
   <span slot="skip">{t.accessibility.skip}</span>
@@ -40,7 +40,7 @@ const gallerySources = [fieldStationSource, fieldDeskSource, fieldClaimsSource, 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero-media" aria-hidden="true">
-        <Image src={heroSource} width={1279} alt="" format="webp" quality={82} loading="eager" fetchpriority="high" decoding="async" />
+        <Image src={heroSource} width={1149} alt="" format="webp" quality={90} loading="eager" fetchpriority="high" decoding="async" />
       </div>
       <div class="shell hero-inner">
         <p class="micro hero-kicker">{t.hero.kicker}</p>
@@ -102,7 +102,7 @@ const gallerySources = [fieldStationSource, fieldDeskSource, fieldClaimsSource, 
     <section class="section section--gallery" aria-labelledby="gallery-title">
       <div class="shell">
         <div class="section-head"><p class="micro section-number">{t.gallery.number}</p><div><h2 class="section-title" id="gallery-title">{t.gallery.title}</h2></div></div>
-        <div class="gallery-grid">{gallerySources.map((src, index) => <button class={`gallery-item gallery-item--${index + 1}`} type="button" data-gallery-alt={t.gallery.alts[index]} aria-label={`${t.accessibility.gallery} ${index + 1}`}><Image src={src} width={1080} alt={t.gallery.alts[index]} format="webp" quality={78} loading="lazy" decoding="async" /><span class="gallery-mark">D97 / {String(index + 1).padStart(2, '0')}</span></button>)}</div>
+        <div class="gallery-grid">{gallerySources.map((src, index) => <button class={`gallery-item gallery-item--${index + 1}`} type="button" data-gallery-alt={t.gallery.alts[index]} aria-label={`${t.accessibility.gallery} ${index + 1}`}><Image src={src} width={1160} alt={t.gallery.alts[index]} format="webp" quality={88} loading="lazy" decoding="async" /><span class="gallery-mark">D97 / {String(index + 1).padStart(2, '0')}</span></button>)}</div>
         <p class="gallery-note">{t.gallery.note}</p>
       </div>
     </section>
