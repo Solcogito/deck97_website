@@ -4,7 +4,6 @@ export const site = {
   title: 'DECK 97 — A civilization is what it refuses to throw away.',
   description:
     'Inspect disputed objects, uncover their histories, and decide what civilization keeps in DECK 97.',
-  studio: 'Solcogito',
   platform: 'PC / Windows',
   releaseState: 'Coming to Steam',
   steamUrl: null as string | null,
