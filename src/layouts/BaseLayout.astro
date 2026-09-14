@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import '../styles/polish.css';
 import '../styles/bilingual.css';
+import '../styles/bars.css';
 import { site } from '../data/site';
 
 interface Props {
@@ -51,7 +52,6 @@ const structuredData = {
     <link rel="manifest" href="/site.webmanifest" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.name} />
-    <meta property="og:locale" content={lang === 'fr' ? 'fr_CA' : 'en_CA'} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
