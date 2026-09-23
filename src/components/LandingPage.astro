@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { site } from '../data/site';
 import { getCopy, type Locale } from '../data/copy';
 import heroSource from '../assets/hero-gameplay.webp';
+import jobHookSource from '../assets/job-annonce-pax.avif';
 import objectCupSource from '../assets/object-last-cup.png';
 import caseSeedSource from '../assets/case-seed-jar.png';
 import galleryDeskWide from '../assets/gallery-desk-wide.webp';
@@ -59,6 +60,29 @@ const gallerySources = [galleryDeskWide, galleryStationView, galleryDeskNight, v
         <p class="hero-origin">{t.hero.origin}</p>
       </div>
       <p class="hero-caption">{t.hero.caption}</p>
+    </section>
+
+    <section class="pax-hook" aria-label={isFrench ? 'Annonce PAX — bulletin d’emploi du Deck 97' : 'PAX job bulletin — Deck 97'}>
+      <div class="shell pax-hook-shell">
+        <figure class="pax-hook-frame">
+          <Image
+            src={jobHookSource}
+            width={800}
+            alt={isFrench
+              ? "Annonce holographique PAX dans un couloir industriel du Deck 97 : bulletin d’emploi pour un agent d’inspection de nuit."
+              : "PAX holographic notice in a Deck 97 industrial corridor: a night-shift inspection agent job bulletin."}
+            format="webp"
+            quality={88}
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption class="pax-hook-meta">
+            <span>PAX / PERSONNEL NETWORK</span>
+            <span>{isFrench ? 'RECRUTEMENT // QUART DE NUIT' : 'RECRUITMENT // NIGHT SHIFT'}</span>
+            <span>{isFrench ? 'D97 / RH-B12' : 'D97 / HR-B12'}</span>
+          </figcaption>
+        </figure>
+      </div>
     </section>
 
     <section class="section section--object" id="object" aria-labelledby="object-title">
@@ -138,3 +162,80 @@ const gallerySources = [galleryDeskWide, galleryStationView, galleryDeskNight, v
     dialog?.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
   </script>
 </BaseLayout>
+
+
+<style>
+  .pax-hook {
+    position: relative;
+    z-index: 2;
+    margin-top: clamp(-3rem, -4vw, -1.5rem);
+    padding: 0 0 clamp(4.75rem, 8vw, 7.5rem);
+    border-bottom: 1px solid var(--line);
+    background:
+      linear-gradient(180deg, transparent 0, rgba(8, 14, 14, .74) 4rem, rgba(12, 12, 10, .98) 100%);
+  }
+
+  .pax-hook-shell {
+    position: relative;
+  }
+
+  .pax-hook-frame {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid rgba(112, 220, 226, .28);
+    background: #071010;
+    box-shadow:
+      0 1.75rem 5rem rgba(0, 0, 0, .46),
+      0 0 3.5rem rgba(29, 198, 207, .08);
+  }
+
+  .pax-hook-frame::after {
+    content: "";
+    position: absolute;
+    inset: .7rem;
+    pointer-events: none;
+    border: 1px solid rgba(135, 231, 234, .10);
+  }
+
+  .pax-hook-frame img {
+    width: 100%;
+    height: auto;
+    filter: saturate(.92) contrast(1.03);
+  }
+
+  .pax-hook-meta {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1rem;
+    align-items: center;
+    margin: 0;
+    padding: .72rem .85rem;
+    border-top: 1px solid rgba(112, 220, 226, .18);
+    background: rgba(5, 11, 11, .94);
+    color: rgba(190, 229, 230, .66);
+    font: 600 .56rem/1.2 var(--mono);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+
+  .pax-hook-meta span:nth-child(2) { text-align: center; }
+  .pax-hook-meta span:last-child { text-align: right; }
+
+  @media (max-width: 820px) {
+    .pax-hook {
+      margin-top: -1.25rem;
+      padding-bottom: 4.5rem;
+    }
+
+    .pax-hook-meta {
+      grid-template-columns: 1fr;
+      gap: .42rem;
+    }
+
+    .pax-hook-meta span:nth-child(2),
+    .pax-hook-meta span:last-child {
+      text-align: left;
+    }
+  }
+</style>
