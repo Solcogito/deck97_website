@@ -165,14 +165,22 @@ const gallerySources = [galleryDeskWide, galleryStationView, galleryDeskNight, v
 
 
 <style>
+  .hero {
+    padding-bottom: clamp(3rem, 5vw, 4.5rem);
+  }
+
+  .hero-caption {
+    z-index: 3;
+  }
+
   .pax-hook {
     position: relative;
     z-index: 2;
-    margin-top: clamp(-3rem, -4vw, -1.5rem);
-    padding: 0 0 clamp(4.75rem, 8vw, 7.5rem);
+    margin-top: 0;
+    padding: clamp(1.25rem, 2.5vw, 2rem) 0 clamp(4.75rem, 8vw, 7.5rem);
+    border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
-    background:
-      linear-gradient(180deg, transparent 0, rgba(8, 14, 14, .74) 4rem, rgba(12, 12, 10, .98) 100%);
+    background: rgba(12, 12, 10, .98);
   }
 
   .pax-hook-shell {
@@ -224,7 +232,8 @@ const gallerySources = [galleryDeskWide, galleryStationView, galleryDeskNight, v
 
   @media (max-width: 820px) {
     .pax-hook {
-      margin-top: -1.25rem;
+      margin-top: 0;
+      padding-top: 1rem;
       padding-bottom: 4.5rem;
     }
 
