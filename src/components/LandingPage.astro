@@ -30,6 +30,7 @@ const gallerySources = [galleryDeskWide, galleryStationView, galleryDeskNight, v
         <nav class="header-nav" aria-label={t.accessibility.nav}>
           <a href="#object">{t.header.object}</a>
           <a href="#process">{t.header.process}</a>
+          <a href="#life">{t.header.life}</a>
           <a href="#station">{t.header.station}</a>
           <a href="#project">{t.header.project}</a>
         </nav>
@@ -106,6 +107,32 @@ const gallerySources = [galleryDeskWide, galleryStationView, galleryDeskNight, v
       <div class="shell">
         <div class="section-head"><p class="micro section-number">{t.decision.number}</p><div><h2 class="section-title" id="decision-title">{t.decision.title}</h2></div></div>
         <div class="decision-panel"><div class="decision-copy"><p class="micro">{t.decision.authorized}</p><h3>{t.decision.question}</h3><p>{t.decision.body}</p></div><div class="decision-grid">{t.decision.dispositions.map(([name, note]) => <div class="disposition"><strong>{name}</strong><span>{note}</span></div>)}</div></div>
+      </div>
+    </section>
+
+    <section class="section section--life" id="life" aria-labelledby="life-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="micro section-number">{t.life.number}</p>
+          <div>
+            <h2 class="section-title" id="life-title">{t.life.title}</h2>
+          </div>
+        </div>
+
+        <div class="project-grid">
+          <div class="project-copy">
+            {t.life.paragraphs.map((p) => <p>{p}</p>)}
+          </div>
+
+          <div class="principles">
+            {t.life.pressures.map(([title, body]) =>
+              <div class="principle">
+                <strong>{title}</strong>
+                <p>{body}</p>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </section>
 
