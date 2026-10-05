@@ -18,7 +18,7 @@ requireText(index, 'A civilization is what it refuses to throw away.', 'index');
 requireText(index, 'Inspect disputed objects. Reconstruct their histories. Decide what civilization keeps.', 'index');
 requireText(index, 'Every shift begins with an object.', 'index');
 requireText(index, 'The history is not given to you. You reconstruct it.', 'index');
-requireText(index, 'The universe is enormous. Your desk is not.', 'index');
+requireText(index, 'The station is larger than what you can reach.', 'index');
 requireText(index, 'Built in Quebec. Meant to remain human.', 'index project');
 requireText(index, 'Three claims. One object. No uncontested history.', 'case teaser');
 requireText(index, 'AUTH-011', 'case teaser');
