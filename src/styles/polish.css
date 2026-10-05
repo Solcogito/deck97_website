@@ -94,7 +94,7 @@
 .claim-list div { display: grid; grid-template-columns: minmax(9rem,.8fr) 1.2fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--line); }
 .claim-list span { color: #aaa399; font: 650 .62rem/1.35 var(--mono); letter-spacing: .08em; }
 .claim-list strong { font: 500 .95rem/1.45 var(--sans); }
-.case-question { margin: auto 0 1.25rem; padding-top: 2.4rem; font: 400 clamp(1.75rem,3vw,2.7rem)/1.05 var(--serif); letter-spacing: -.025em; text-wrap: balance; }
+.case-question { margin: auto 0 1.25rem; padding-top: 2.4rem; font: 550 clamp(1.75rem,3vw,2.7rem)/1.05 var(--sans); letter-spacing: -.025em; text-wrap: balance; }
 .case-actions { display: flex; flex-wrap: wrap; gap: .45rem; }
 .case-actions span { padding: .48rem .62rem; border: 1px solid var(--line); color: #aaa399; font: 650 .58rem/1 var(--mono); letter-spacing: .1em; }
 
