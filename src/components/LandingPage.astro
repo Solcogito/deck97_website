@@ -86,6 +86,30 @@ const gallerySources = [galleryDeskWide, galleryStationView, galleryDeskNight, v
       </div>
     </section>
 
+    <section class="positioning" aria-labelledby="positioning-title">
+      <div class="shell">
+        <div class="positioning-intro">
+          <p class="micro">{t.overview.eyebrow}</p>
+          <h2 id="positioning-title">{t.overview.title}</h2>
+          <p class="positioning-description">{t.overview.description}</p>
+        </div>
+
+        <div class="positioning-grid">
+          {t.overview.bullets.map(([title, body], index) =>
+            <article class="positioning-item">
+              <span class="positioning-index">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <div>
+                <h3>{title}</h3>
+                <p>{body}</p>
+              </div>
+            </article>
+          )}
+        </div>
+      </div>
+    </section>
+
     <section class="section section--object" id="object" aria-labelledby="object-title">
       <div class="shell">
         <div class="section-head"><p class="micro section-number">{t.object.number}</p><div><h2 class="section-title" id="object-title">{t.object.title}</h2><p class="section-intro">{t.object.intro}</p></div></div>
@@ -272,6 +296,93 @@ const gallerySources = [galleryDeskWide, galleryStationView, galleryDeskNight, v
     .pax-hook-meta span:nth-child(2),
     .pax-hook-meta span:last-child {
       text-align: left;
+    }
+  }
+
+  .positioning {
+    position: relative;
+    padding: clamp(4.5rem, 8vw, 8rem) 0;
+    border-bottom: 1px solid var(--line);
+    background:
+      linear-gradient(
+        180deg,
+        rgba(20, 25, 24, .48),
+        rgba(12, 12, 10, 0)
+      );
+  }
+
+  .positioning-intro {
+    max-width: 58rem;
+    margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+  }
+
+  .positioning-intro h2 {
+    max-width: 18ch;
+    margin: .65rem 0 1.25rem;
+    font-size: clamp(2.2rem, 5vw, 5rem);
+    line-height: .98;
+    letter-spacing: -.035em;
+  }
+
+  .positioning-description {
+    max-width: 52rem;
+    margin: 0;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.7;
+    color: var(--muted);
+  }
+
+  .positioning-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
+  }
+
+  .positioning-item {
+    display: grid;
+    grid-template-columns: 3.25rem 1fr;
+    gap: 1rem;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .positioning-item:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .positioning-index {
+    padding-top: .2rem;
+    font: 600 .65rem/1 var(--mono);
+    letter-spacing: .12em;
+    color: var(--muted);
+  }
+
+  .positioning-item h3 {
+    margin: 0 0 .7rem;
+    font: 700 clamp(.85rem, 1.2vw, 1rem)/1.2 var(--mono);
+    letter-spacing: .08em;
+  }
+
+  .positioning-item p {
+    max-width: 38rem;
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  @media (max-width: 760px) {
+    .positioning-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .positioning-item:last-child {
+      grid-column: auto;
+    }
+
+    .positioning-item {
+      grid-template-columns: 2.3rem 1fr;
     }
   }
 </style>

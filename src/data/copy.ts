@@ -4,7 +4,7 @@ export const copy = {
   en: {
     meta: {
       title: 'DECK 97 — A civilization is what it refuses to throw away.',
-      description: 'Inspect disputed objects, reconstruct their histories, and decide what civilization keeps in DECK 97, an independent game made in Quebec.',
+      description: 'DECK 97 is a narrative inspection game aboard an aging orbital station. Investigate disputed objects, manage fatigue, food, transit and money, and try to make rent by the end of the month.',
     },
     accessibility: {
       skip: 'Skip to content',
@@ -41,6 +41,18 @@ export const copy = {
       status: 'In development',
       origin: 'Independent solo game made in Quebec',
       caption: 'Current in-engine development capture / imagery and presentation subject to change',
+    },
+    overview: {
+      eyebrow: 'THE WORK. THE MONTH. THE COST.',
+      title: 'Work. Eat. Sleep. Pay rent. Inspect what remains.',
+      description: 'Deck 97 is a narrative inspection game set aboard an aging orbital station. Work your shifts, investigate disputed objects, manage fatigue, buy food, move through the station, and try to make rent. Every decision costs time, money, or energy — and the station keeps moving whether you are ready or not.',
+      bullets: [
+        ['INSPECT, INVESTIGATE, DECIDE', 'Examine objects, take measurements, search station archives, verify claims and reconstruct provenance before choosing a disposition.'],
+        ['RULE WITHOUT PERFECT INFORMATION', 'Return, hold, archive, auction, dispose or escalate when evidence is incomplete, contradictory, damaged, forged or missing.'],
+        ['SURVIVE THE WORKING MONTH', 'Get paid every three shifts while managing food, fatigue, transit, errands and the rent waiting at the end of the run.'],
+        ['CHOOSE WHAT DESERVES YOUR TIME', 'Go home, rest, buy what you need, help someone, follow a problem — or push yourself through one more task.'],
+        ['LIVE IN A STATION THAT MOVES WITHOUT YOU', 'Multi-day stories, generated cases, schedules and consequences continue whether you participate in them or not.'],
+      ],
     },
     object: {
       number: '01 / THE OBJECT',
@@ -169,7 +181,7 @@ export const copy = {
   fr: {
     meta: {
       title: 'DECK 97 — Une civilisation, c’est ce qu’elle refuse de jeter.',
-      description: 'Inspectez des objets disputés, reconstituez leur histoire et décidez de ce que la civilisation conserve dans DECK 97, un jeu indépendant créé au Québec.',
+      description: 'DECK 97 est un jeu narratif d’inspection à bord d’une vieille station orbitale. Enquêtez sur des objets disputés, gérez fatigue, nourriture, transport et argent, et essayez de payer votre loyer à la fin du mois.',
     },
     accessibility: {
       skip: 'Aller au contenu',
@@ -206,6 +218,18 @@ export const copy = {
       status: 'En développement',
       origin: 'Jeu indépendant solo créé au Québec',
       caption: 'Capture de développement actuelle en moteur / visuels et présentation sujets à changement',
+    },
+    overview: {
+      eyebrow: 'LE TRAVAIL. LE MOIS. LE PRIX À PAYER.',
+      title: 'Travaille. Mange. Dors. Paie ton loyer. Inspecte ce qu’il reste.',
+      description: 'Deck 97 est un jeu narratif d’inspection qui se déroule à bord d’une vieille station orbitale. Travaille, enquête sur des objets disputés, gère ta fatigue, achète de quoi manger, déplace-toi dans la station et essaie de payer ton loyer. Chaque décision coûte du temps, de l’argent ou de l’énergie — et la station continue de vivre sans t’attendre.',
+      bullets: [
+        ['INSPECTE, ENQUÊTE, DÉCIDE', 'Examine les objets, prends des mesures, consulte les archives de la station, vérifie les revendications et reconstitue leur provenance avant de décider de leur sort.'],
+        ['DÉCIDE SANS INFORMATION PARFAITE', 'Rends, retiens, archives, vends, élimines ou transfères un dossier lorsque les preuves sont incomplètes, contradictoires, endommagées, falsifiées ou absentes.'],
+        ['SURVIS AU MOIS DE TRAVAIL', 'Reçois ta paie tous les trois quarts tout en gérant nourriture, fatigue, transport, courses et le loyer qui t’attend à la fin de la partie.'],
+        ['CHOISIS CE QUI MÉRITE TON TEMPS', 'Rentre chez toi, repose-toi, achète ce dont tu as besoin, aide quelqu’un, suis un problème — ou pousse-toi à accomplir une dernière tâche.'],
+        ['VIS DANS UNE STATION QUI CONTINUE SANS TOI', 'Les histoires sur plusieurs jours, les cas générés, les horaires et leurs conséquences continuent que tu t’en occupes ou non.'],
+      ],
     },
     object: {
       number: '01 / L’OBJET',
